@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <process id="userAndGroupInUserTask" name="userAndGroupInUserTask" isExecutable="true">
+    <startEvent id="startevent1" name="start"></startEvent>
+    <userTask id="studyUserAndGroupInUserTask" name="学习用户与组在用户任务中的应用" activiti:candidateGroups="deptLeader"></userTask>
+    <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="studyUserAndGroupInUserTask"></sequenceFlow>
+    <endEvent id="endevent1" name="end"></endEvent>
+    <sequenceFlow id="sid-D4F5C38D-C475-443F-867B-50209BE02D26" sourceRef="studyUserAndGroupInUserTask" targetRef="endevent1"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_userAndGroupInUserTask">
+    <bpmndi:BPMNPlane bpmnElement="userAndGroupInUserTask" id="BPMNPlane_userAndGroupInUserTask">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="30.0" width="30.0" x="120.0" y="90.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="studyUserAndGroupInUserTask" id="BPMNShape_studyUserAndGroupInUserTask">
+        <omgdc:Bounds height="80.0" width="100.0" x="270.0" y="65.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="28.0" width="28.0" x="480.0" y="91.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-D4F5C38D-C475-443F-867B-50209BE02D26" id="BPMNEdge_sid-D4F5C38D-C475-443F-867B-50209BE02D26">
+        <omgdi:waypoint x="370.0" y="105.0"></omgdi:waypoint>
+        <omgdi:waypoint x="480.0" y="105.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="150.0" y="105.0"></omgdi:waypoint>
+        <omgdi:waypoint x="270.0" y="105.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
