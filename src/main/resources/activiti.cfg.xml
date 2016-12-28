@@ -59,8 +59,11 @@
     <bean id="historyService" factory-bean="processEngine" factory-method="getHistoryService" />
     <bean id="managementService" factory-bean="processEngine" factory-method="getManagementService" />
     <bean id="identityService" factory-bean="processEngine" factory-method="getIdentityService" />  -->
-	<bean id="processEngineConfiguration" class="org.activiti.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration">
-
-
+	<bean id="processEngineConfiguration" class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">
+		<property name="jdbcDriver" value="com.mysql.jdbc.Driver"></property>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306?activiti?useUnicode=true&amp;characterEncoding=utf-8"></property>
+		<property name="jdbcUsername" value="root"></property>
+		<property name="jdbcPassword" value="root"></property>
+		<property name="databaseSchemaUpdate" value="true"></property>
 	</bean>
 </beans>
