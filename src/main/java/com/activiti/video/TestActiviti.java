@@ -2,15 +2,21 @@ package com.activiti.video;
 
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngineConfiguration;
+import org.activiti.engine.ProcessEngines;
 import org.junit.Test;
 
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 /**
  * Created by liuxiaobao on 2016/12/28.
  * 创建数据库25张表
  */
 public class TestActiviti {
+    public void getDefaultProcessEngine(){
+       /*会自动加载classpath下的activiti.cfg.xml文件*/
+       ProcessEngine processEngine= ProcessEngines.getDefaultProcessEngine();
+    }
+
     /**
      * 使用代码创建25张表
      */
@@ -40,6 +46,6 @@ public class TestActiviti {
     public void createTableByXml(){
         ProcessEngineConfiguration processEngineConfiguration=ProcessEngineConfiguration.createProcessEngineConfigurationFromResource("activiti.cfg.xml");
         ProcessEngine processEngine=processEngineConfiguration.buildProcessEngine();
-        assertNull(processEngine);
+        assertNotNull(processEngine);
     }
 }
