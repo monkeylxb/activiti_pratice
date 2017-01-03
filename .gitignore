@@ -39,3 +39,4 @@ proguard/
 .idea/  
 *.iml  
 src/main/webapp/META-INF/
+out/
